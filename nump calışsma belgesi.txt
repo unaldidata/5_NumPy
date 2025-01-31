@@ -1,0 +1,401 @@
+import numpy as np
+
+my_Python_List = [1, 9, 8, 3]
+
+numpy_array_from_list = np.array(myPtythonList)
+
+numpy_array_from_list
+
+output is 
+
+array([1, 9,8, 3])
+
+in practice there is no need to declare a python list. The operation is like this
+
+a = np.array([1,9,8, 3])
+
+maths 
+
+numpy_array_from_list + 10
+
+output 
+
+array([11,19,18,13])
+
+import numpy as np
+
+a = np.array ([1,2,3])
+
+print(a.shape)
+
+print(a.dtype)
+
+(3,)
+
+int64
+
+float64
+
+dimension array
+
+### 2 dimension 
+
+c =np.array([1,2,3],
+		[4,5,6],
+		[7,8,9],
+		[10,11,12]
+print(d.shape)
+
+(2,2,3)
+
+what is numpy zeros???
+
+numpy.zeros(shape, dt = float, order = 'c')
+
+Shape: is the shape of the numpy zero array
+Dtype: is the datatype in numpy zeros. It is optional. The default value is float64
+Order: Default is C which is an essential row style for numpy.zeros() in Python.
+
+import numpy as np
+np.zeros((2,2))
+
+array([[0,, 0,], 
+	[0., 0.]])
+
+example of numpe zero with datatype
+
+import numpy as np
+
+np.zeros((2,2), dtype = np.int16)
+
+
+array([[0, 0],
+	[0, 0]], dtype=int16)
+
+numpy ones
+
+numpy.ones(shape, dtype=float, order='C')
+
+Python numpy.ones() Parameters
+
+Here,
+
+Shape: is the shape of the np.ones Python Array
+Dtype: is the datatype in numpy ones. It is optional. The default value is float64
+Order: Default is C which is an essential row style.
+
+import numpy as np
+
+np.ones ((1,2,3)), dtyep np.int16)
+
+çıktı
+
+array([[[1,1,1),
+	[1,1,1]]], dtype = int16)
+
+numpy.reshape() function in Python
+Python NumPy Reshape function is used to shape an array without changing its data. In some occasions, you may need to reshape the data from wide to long. You can use the np.reshape function for this.
+
+Syntax of np.reshape()
+
+numpy.reshape(a, new_Shape, order = 'C')
+
+a: array that you want to reshape
+newsghape the new desired shape
+order : default is c which is an essential row style. 
+
+
+example
+
+import numpy as np
+
+e = np.array([(1,2,3), (4,5,6)])
+
+print(e)
+
+e.reshape(3,2)
+
+output
+
+Before reshape
+
+[[1 2 3]
+  [4 5 6]]
+
+//After Reshape
+array([[1, 2],       
+	[3, 4],       
+	[5, 6]])
+
+numpy.flatten() in Python
+Python NumPy Flatten function is used to return a copy of the array in one-dimension. When you deal with some neural network like convnet, you need to flatten the array. You can use the np.flatten() functions for this.
+
+numpy.flatten(order = 'C')
+
+e.flatten()
+
+output
+
+array([[1,2,3,4,5])
+
+To generate random numbers for Gaussian distribution, use:
+
+numpy.random.normal(loc, scale, size)
+
+What is numpy.arange()?
+numpy.arange() is an inbuilt numpy function that returns an ndarray object containing evenly spaced values within a defined interval. For instance, you want to create values from 1 to 10; you can use np.arange() in Python function.
+
+Syntax:
+
+numpy.arange(start, stop, step, dtype)
+
+import numpy np
+
+np.arange(1,11)
+
+output is:
+
+array([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10])
+
+Example:
+
+If you want to change the step in this NumPy arange function in Python example, you can add a third number in the parenthesis. It will change the step.
+
+import numpy np
+np.arange(1, 14, 4)
+
+Output is:
+
+array([ 1,  5,  9, 13])
+
+numpy Linspace Function
+
+Syntax:
+
+numpy.linspace(start, stop, num, endpoint)
+
+num : number of samples to generate. default is 50
+
+end point if true (default) stop is the last value. if false stop value is not included.
+
+5.3. logspace() 
+logspace() logaritmik aralıklarda bir dizi oluşturur.
+
+logspace() fonksiyonu, linspace() fonksiyonuna benzer şekilde çalışır, ancak aralıklar logaritmik olarak hesaplanır.
+
+Logspace : Başlangıç değeri 10a ,bitiş değeri değeri 10b olan n elemanlı ve elemanları arasındaki katları eşit olan bir dizi oluşturur.
+
+np.logspace(1.0 , 5.0, 12, 16) 
+
+
+numpy array indexing
+
+Example
+Get the first element from the following array:
+
+import numpy as np
+
+arr = np.array([1, 2, 3, 4])
+
+print(arr[0])
+
+Access 2-D Arrays
+
+Example
+Access the element on the first row, second column:
+
+import numpy as np
+
+arr = np.array([[1,2,3,4,5], [6,7,8,9,10]])
+
+print('2nd element on 1st row: ', arr[0, 1])
+
+Example
+Access the element on the 2nd row, 5th column:
+
+import numpy as np
+
+arr = np.array([[1,2,3,4,5], [6,7,8,9,10]])
+
+print('5th element on 2nd row: ', arr[1, 4])
+
+Access 3-D Arrays
+
+Example
+Access the third element of the second array of the first array:
+
+
+arr = np.array([[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]]])
+
+Negative Indexing
+Use negative indexing to access an array from the end.
+
+Example
+Print the last element from the 2nd dim:
+
+import numpy as np
+
+arr = np.array([[1,2,3,4,5], [6,7,8,9,10]])
+
+print('Last element from 2nd dim: ', arr[1, -1])
+
+slicing
+
+Example
+Slice elements from index 1 to index 5 from the following array:
+
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5, 6, 7])
+
+print(arr[1:5])
+Note: The result includes the start index, but excludes the end index.
+
+Example
+Slice elements from index 1 to index 5 from the following array:
+
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5, 6, 7])
+
+print(arr[1:5])
+Note: The result includes the start index, but excludes the end index.
+
+Example
+Slice elements from index 4 to the end of the array:
+
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5, 6, 7])
+
+print(arr[4:])
+
+Example
+Slice elements from the beginning to index 4 (not included):
+
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5, 6, 7])
+
+print(arr[:4])
+
+Negative Slicing
+Use the minus operator to refer to an index from the end:
+
+Example
+Slice from the index 3 from the end to index 1 from the end:
+
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5, 6, 7])
+
+print(arr[-3:-1])
+
+Slicing 2-D Arrays
+Example
+From the second element, slice elements from index 1 to index 4 (not included):
+
+import numpy as np
+
+arr = np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])
+
+print(arr[1, 1:4])
+
+Note: Remember that second element has index 1.
+
+
+Example
+From both elements, return index 2:
+
+import numpy as np
+
+arr = np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])
+
+print(arr[0:2, 2])
+
+Example
+From both elements, slice index 1 to index 4 (not included), this will return a 2-D array:
+
+import numpy as np
+
+arr = np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])
+
+print(arr[0:2, 1:4])
+
+
+NumPy Data Types
+Data Types in Python
+By default Python have these data types:
+
+strings - integer - float - boolean - 
+complex - used to represent complex numbers. e.g. 1.0 + 2.0j, 1.5 + 2.5j
+
+print(arr[0, 1, 2])
+
+
+Checking the Data Type of an Array
+The NumPy array object has a property called dtype that returns the data type of the array:
+
+Example
+Get the data type of an array object:
+
+import numpy as np
+
+arr = np.array([1, 2, 3, 4])
+
+print(arr.dtype)
+
+Sorting Arrays
+Sorting means putting elements in an ordered sequence.
+
+Example
+Sort the array:
+
+import numpy as np
+
+arr = np.array([3, 2, 0, 1])
+
+print(np.sort(arr))
+Note: This method returns a copy of the array, leaving the original array unchanged.
+
+Example
+Sort the array alphabetically:
+
+import numpy as np
+
+arr = np.array(['banana', 'cherry', 'apple'])
+
+print(np.sort(arr))
+
+Statistical Functions in Python
+NumPy has quite a few useful statistical functions for finding minimum, maximum, percentile standard deviation and variance, etc from the given elements in the array. The functions are explained as follows −
+
+Numpy is equipped with the robust statistical functions as listed below
+
+Function	Numpy
+Min	np.min()
+Max	np.max()
+Mean	np.mean()
+Median	np.median()
+Standard deviation	np.std()
+Consider the following Array:
+
+import numpy as np
+normal_array = np.random.normal(5, 0.5, 10)
+print(normal_array)
+
+Example of NumPy Statistical function
+### Min 
+print(np.min(normal_array))
+
+### Max 
+print(np.max(normal_array))
+
+### Mean 
+print(np.mean(normal_array))
+
+### Median
+print(np.median(normal_array))
+
+### Sd
+print(np.std(normal_array))
